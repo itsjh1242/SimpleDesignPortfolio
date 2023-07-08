@@ -2,10 +2,27 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/settings.css" />
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <script src="/javascripts/Strings.js"></script>
+    <script src="/javascripts/themeChange.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="index-frame">
+      <% include ./content/themeToggle.ejs %>
+      <div class="profile">
+        <p id="profile_banner" class="profile_banner"></p>
+        <p id="profile_title" class="profile_title"></p>
+        <div class="profile_image_layout">
+          <img id="profile_image" src="/images/profileImage.png" />
+        </div>
+        <div class="profile_bottom_row">
+          <p id="left_text" class="left_text"></p>
+          <p id="right_text" class="right_text"></p>
+        </div>
+      </div>
+    </div>
   </body>
+  <script>
+    stringConvert(IndexPage);
+  </script>
 </html>
