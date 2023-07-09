@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Simple Design Portfolio</title>
     <link rel="stylesheet" href="/stylesheets/styles.css" />
     <script src="/javascripts/Strings.js"></script>
     <script src="/javascripts/themeChange.js"></script>
@@ -9,20 +9,29 @@
   <body>
     <div class="index-frame">
       <% include ./content/themeToggle.ejs %>
+      <!-- Profile Section -->
       <div class="profile">
-        <p id="profile_banner" class="profile_banner"></p>
-        <p id="profile_title" class="profile_title"></p>
+        <p id="profile_banner" class="profile_banner"><%= IndexPage.profile_banner %></p>
+        <p id="profile_title" class="profile_title"><%= IndexPage.profile_title %></p>
         <div class="profile_image_layout">
           <img id="profile_image" src="/images/profileImage.png" />
         </div>
         <div class="profile_bottom_row">
-          <p id="left_text" class="left_text"></p>
-          <p id="right_text" class="right_text"></p>
+          <p id="left_text" class="left_text"><%= IndexPage.profile_left_text %></p>
+          <p id="right_text" class="right_text"><%= IndexPage.profile_right_text %></p>
         </div>
+      </div>
+      <!-- Menu Section -->
+      <div id="menu_" class="menu_">
+        <% for (var i = 0; i < MenuCount; i++) { %>
+        <div class="menu_item">
+          <p id="menu_title_<%= i %>" class="menu_title"><%= IndexPage.menu[i][0] %></p>
+          <p id="menu_content_<%= i %>" class="menu_content"><%= IndexPage.menu[i][1] %></p>
+          <p id="menu_readmore<%= i %>" class="menu_readmore"><%= IndexPage.menu_readmore %></p>
+        </div>
+        <% } %>
       </div>
     </div>
   </body>
-  <script>
-    stringConvert(IndexPage);
-  </script>
+  <script></script>
 </html>
