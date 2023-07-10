@@ -83,11 +83,10 @@
 
 /* Body */
 body {
-  display: flex;
-  justify-content: center;
   /* Root Padding All pages */
   padding-top: 100px;
-
+  padding-left: 240px;
+  padding-right: 240px;
   padding-bottom: 40px;
   /* Theme */
   background: var(--color-primary);
@@ -113,6 +112,7 @@ p {
   padding: var(--padding-top-20);
   gap: var(--margin-small2);
   border-top: var(--border-bottom-light-gray);
+  margin-top: 40px;
 }
 .footer .footer_title {
   font-family: var(--font-bold);
@@ -147,9 +147,7 @@ p {
   justify-content: center;
   width: 100%;
   height: 100%;
-  max-width: 1920px;
-  padding-left: 240px;
-  padding-right: 240px;
+
   gap: 70px;
 }
 /* Index Page - Profile */
