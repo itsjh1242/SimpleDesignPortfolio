@@ -16,7 +16,7 @@ const IndexPage = {
   // Landing Page Profile banner
   profile_banner: "Personal Portfolio",
   // Your Name
-  profile_title: "JunHyeon Kim",
+  profile_name: "JunHyeon Kim",
   // Profile About Left Text
   profile_left_text: "Profile",
   // Profile About Right Text
@@ -39,6 +39,27 @@ const IndexPage = {
   },
 };
 
+const ExperiencePage = {
+  experience: [
+    {
+      experience_title: "Freelance Designer",
+      experience_period: "Jan 2022 - July 2020",
+      experience_content: ["Support for makin the Brand Design", "Make illustrate", "Design Logo"],
+    },
+    {
+      experience_title: "AYADA Thai Restruant Server",
+      experience_period: "May 2017 - Jun 2017",
+      experience_content: ["Handle to customor in English", "Manage the requirements from customer"],
+    },
+    {
+      experience_title: "Korea Dream Art Caricature Artist",
+      experience_period: "Jan2019 - Jun 2020",
+      experience_content: ["Perform the event schedule and manage the supplies", "Create the image for catching Character"],
+    },
+  ],
+};
+
 module.exports = {
   IndexPage: IndexPage,
+  ExperiencePage: ExperiencePage,
 };

@@ -14,7 +14,7 @@
         <p id="profile_banner" class="profile_banner"><%= IndexPage.profile_banner %></p>
         <div class="profile_wrap_col">
           <p id="profile_title" class="profile_title">Hi,</p>
-          <p id="profile_title" class="profile_title">I'm <%= IndexPage.profile_title %></p>
+          <p id="profile_title" class="profile_title">I'm <%= IndexPage.profile_name %></p>
         </div>
         <div class="profile_image_layout_wrap_row">
           <div id="profile_image_layout" class="profile_image_layout">
@@ -42,7 +42,7 @@
         <div class="menu_item">
           <p id="menu_title_<%= i %>" class="menu_title"><%= IndexPage.menu[i][0] %></p>
           <p id="menu_content_<%= i %>" class="menu_content"><%= IndexPage.menu[i][1] %></p>
-          <p id="menu_readmore<%= i %>" class="menu_readmore"><%= IndexPage.menu_readmore %></p>
+          <p id="menu_readmore<%= i %>" class="menu_readmore"><a href="/menu/<%= i %>"><%= IndexPage.menu_readmore %></a></p>
         </div>
         <% } %>
       </div>
