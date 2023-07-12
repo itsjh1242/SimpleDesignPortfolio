@@ -1,0 +1,28 @@
+.slide {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: scroll;
+  margin: 0 auto;
+  background-color: #000;
+  gap: 40px;
+}
+
+.slide::-webkit-scrollbar {
+  display: none;
+}
+/* .slide::-webkit-scrollbar {
+  width: 0px;
+}
+.slide::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 20px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.slide::-webkit-scrollbar-track {
+  background: #000;
+  border-radius: 20px;
+  box-shadow: inset 7px 10px 12px #000;
+} */

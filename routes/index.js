@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 const IndexPage = require("../public/javascripts/Strings").IndexPage;
 const ExperiencePage = require("../public/javascripts/Strings").ExperiencePage;
+const WorksPage = require("../public/javascripts/Strings").WorksPage;
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -23,7 +24,11 @@ router.get("/menu/:index", function (req, res, next) {
       menuSubTitle: "Job Responsibilities, Achievements",
     });
   } else if (req.params.index == 1) {
-    return res.render("works", {});
+    return res.render("works", {
+      WorksPage: WorksPage,
+      menuTitle: "Works",
+      menuSubTitle: "Personal or Team Project Works",
+    });
   } else if (req.params.index == 2) {
     return res.render("skills", {});
   } else if (req.params.index == 3) {

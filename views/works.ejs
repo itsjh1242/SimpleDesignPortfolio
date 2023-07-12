@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Design Portfolio</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <link rel="stylesheet" href="/stylesheets/imageSlide.css" />
+    <script src="/javascripts/Strings.js"></script>
+    <script src="/javascripts/themeChange.js"></script>
+    <script src="/javascripts/imageslide.js"></script>
+  </head>
+  <body>
+    <% include ./content/menuPagetop.ejs %>
+    <div class="works_content">
+      <div class="works_content_title">Works</div>
+      <div class="slide">
+        <img src="/images/sample_img_1.png" alt="" />
+        <img src="/images/sample_img_1.png" alt="" />
+        <img src="/images/sample_img_1.png" alt="" />
+      </div>
+      <div class="works_content_skills">
+        <img src="/images/skills/skills_github.png" alt="" />
+      </div>
+      <p class="works_content_description">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    <% include ./content/footer.ejs %>
+  </body>
+</html>

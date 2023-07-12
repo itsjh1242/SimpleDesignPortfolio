@@ -342,3 +342,36 @@ p {
   color: var(--font-color-primary);
   list-style-type: disc;
 }
+
+/* Works Page */
+.works_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: var(--padding-top-bottom-20);
+  gap: var(--margin-small);
+  border-top: var(--border-top-bottom-light-gray);
+  border-bottom: var(--border-top-bottom-light-gray);
+}
+.works_content .works_content_title {
+  font-family: var(--font-bold);
+  font-size: var(--font-size-50);
+  color: var(--font-color-primary);
+}
+.works_content .works_content_skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: var(--margin-right-20);
+}
+.works_content .works_content_skills img {
+  width: 30px;
+  height: 30px;
+}
+.works_content .works_content_description {
+  font-family: var(--font-light);
+  font-size: var(--font-size-24);
+  color: var(--font-color-primary);
+}
