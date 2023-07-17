@@ -34,7 +34,7 @@ const IndexPage = {
   profile_slide: {
     0: "KIM JUN HYEON",
     1: "Bachelor’s Degree in Software Enginnering",
-    2: "Dongseo University, Busan,South Korea",
+    2: "Dongseo University, Busan, South Korea",
     3: "Mar.2018 – Feb.2024",
   },
 };

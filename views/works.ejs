@@ -30,4 +30,15 @@
     </div>
     <% include ./content/footer.ejs %>
   </body>
+  <script>
+    const element = document.querySelector(".slide");
+
+    element.addEventListener("wheel", (event) => {
+      event.preventDefault();
+
+      element.scrollBy({
+        left: event.deltaY < 0 ? -30 : 30,
+      });
+    });
+  </script>
 </html>

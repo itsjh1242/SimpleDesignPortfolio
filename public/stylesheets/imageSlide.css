@@ -6,8 +6,9 @@
   position: relative;
   overflow: scroll;
   margin: 0 auto;
-  background-color: #000;
+  background: transparent;
   gap: 40px;
+  overflow-x: scroll;
 }
 
 .slide::-webkit-scrollbar {
