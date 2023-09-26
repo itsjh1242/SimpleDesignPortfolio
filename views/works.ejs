@@ -27,14 +27,18 @@
     <% }) %> <% include ./content/footer.ejs %>
   </body>
   <script>
-    const element = document.querySelector(".slide");
-
-    element.addEventListener("wheel", (event) => {
+    const element = document.querySelectorAll(".slide");
+    
+    element.forEach(e => {
+      e.addEventListener("wheel", (event) => {
       event.preventDefault();
 
-      element.scrollBy({
+      e.scrollBy({
         left: event.deltaY < 0 ? -30 : 30,
       });
     });
+    });
+
+    
   </script>
 </html>

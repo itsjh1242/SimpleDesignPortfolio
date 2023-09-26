@@ -1,8 +1,9 @@
 var express = require("express");
 var router = express.Router();
-const IndexPage = require("../public/javascripts/Strings").IndexPage;
-const ExperiencePage = require("../public/javascripts/Strings").ExperiencePage;
-const WorksPage = require("../public/javascripts/Strings").WorksPage;
+const IndexPage = require("../public/javascripts/config").IndexPage;
+const ExperiencePage = require("../public/javascripts/config").ExperiencePage;
+const WorksPage = require("../public/javascripts/config").WorksPage;
+const SkillsPage = require("../public/javascripts/config").SkillsPage;
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -30,7 +31,11 @@ router.get("/menu/:index", function (req, res, next) {
       menuSubTitle: "Personal or Team Project Works",
     });
   } else if (req.params.index == 2) {
-    return res.render("skills", {});
+    return res.render("skills", {
+      SkillsPage: SkillsPage,
+      menuTitle: "Skills & Certificates",
+      menuSubTitle: "Key Skills, Certificates"
+    });
   } else if (req.params.index == 3) {
     return res.render("activities", {});
   }

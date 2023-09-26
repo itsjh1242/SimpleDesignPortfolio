@@ -85,8 +85,42 @@ const WorksPage = {
   ],
 };
 
+const SkillsPage = {
+  Language: [
+    "Fluent speaking Korean & English",
+    "Mid-level of Chinese"
+  ],
+  ComputerSkills: [
+    "Python - Advance",
+    "Javascript - Advance",
+    "MS word - Advance",
+    "Excel - Intermediate", 
+    "Adobe Photoshop - Advance",
+    "Adobe Illustrator - Advance"
+  ],
+  License: [
+    "Driving license"
+  ],
+  Awards: [
+    {
+      AwardAgency: "Red dot Award",
+      AwardYear: "2022",
+      AwardDetail: "Won the Best of the Best",
+      AwardTitle: "Touchable Hair Catalog for Blind",
+      Role: [
+        "Idea Maker",
+        "Catalog Maker",
+        "Support Panel Design",
+        "Support Producting Video"
+      ],
+      AwardImage: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"]
+    }
+  ]
+}
+
 module.exports = {
   IndexPage: IndexPage,
   ExperiencePage: ExperiencePage,
   WorksPage: WorksPage,
+  SkillsPage: SkillsPage,
 };

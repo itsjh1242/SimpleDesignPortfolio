@@ -264,7 +264,8 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  margin-left: 240px;
+  margin-right: 240px;
   gap: var(--margin-right-60);
 }
 .index-frame .profile .profile_bottom_row .left_text {
@@ -281,6 +282,8 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 240px;
+  margin-right: 240px;
   gap: var(--margin-content);
 }
 .index-frame .menu_ .menu_item {
@@ -401,3 +404,51 @@ p {
   color: var(--font-color-primary);
   margin-top: var(--margin-small);
 }
+
+/* Skills & Certificates Page */
+/* .skiils_content {
+  display: flex;
+  flex-direction: column;
+} */
+
+.skiils_content {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-top-bottom-20);
+  margin-left: 240px;
+  margin-right: 240px;
+}
+
+
+.skiils_title {
+  display: flex;
+  justify-content: flex-end;
+  font-family: var(--font-extrabold);
+  font-size: var(--font-size-36);
+  color: var(--font-color-primary);
+}
+.skiils_component {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: var(--font-regular);
+  font-size: var(--font-size-36);
+  color: var(--font-color-primary);
+}
+
+.award .skiils_component .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.award .skiils_component .top .left {
+  display: flex;
+  flex-direction: column;
+}
+
+.award .skiils_component .top .right {
+  display: flex;
+  align-items: flex-end;
+}
+
