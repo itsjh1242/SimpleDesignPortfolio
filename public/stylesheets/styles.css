@@ -45,6 +45,7 @@
   --margin-small: 10px;
   --margin-small2: 20px;
   --margin-content: 40px;
+  --margin-right-20: 20px;
   --margin-right-60: 60px;
   --margin-bottom-60: 60px;
   /* Border */
@@ -87,20 +88,19 @@
 /* Animation */
 @keyframes fadein {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
-
 
 /* Body */
 body {
   /* Root Padding All pages */
   padding-top: 100px;
-  padding-left: 240px;
-  padding-right: 240px;
+  /* padding-left: 240px;
+  padding-right: 240px; */
   padding-bottom: 40px;
   /* Theme */
   background: var(--color-primary);
@@ -135,11 +135,13 @@ p {
   margin-bottom: var(--margin-bottom-60);
 }
 .menu_page_top .menu_page_title {
+  padding-right: 240px;
   font-family: var(--font-bold);
   font-size: var(--font-size-72);
   color: var(--font-color-primary);
 }
 .menu_page_top .menu_page_subtitle {
+  padding-left: 240px;
   font-family: var(--font-light);
   font-size: var(--font-size-36);
   color: var(--font-color-primary);
@@ -153,6 +155,8 @@ p {
   gap: var(--margin-small2);
   border-top: var(--border-bottom-light-gray);
   margin-top: 40px;
+  padding-right: 240px;
+  padding-left: 240px;
 }
 .footer .footer_title {
   font-family: var(--font-bold);
@@ -326,6 +330,8 @@ p {
   align-items: start;
   gap: var(--margin-small2);
   padding: var(--padding-top-bottom-20);
+  margin-right: 240px;
+  margin-left: 240px;
   margin-bottom: var(--margin-bottom-60);
   border-top: var(--border-top-bottom-light-gray);
   border-bottom: var(--border-top-bottom-light-gray);
@@ -366,6 +372,9 @@ p {
   justify-content: start;
   align-items: start;
   padding: var(--padding-top-bottom-20);
+  margin-right: 240px;
+  margin-left: 240px;
+  margin-bottom: var(--margin-bottom-60);
   gap: var(--margin-small);
   border-top: var(--border-top-bottom-light-gray);
   border-bottom: var(--border-top-bottom-light-gray);
@@ -390,4 +399,5 @@ p {
   font-family: var(--font-light);
   font-size: var(--font-size-24);
   color: var(--font-color-primary);
+  margin-top: var(--margin-small);
 }

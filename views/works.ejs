@@ -9,26 +9,22 @@
     <script src="/javascripts/imageslide.js"></script>
   </head>
   <body>
-    <% include ./content/menuPagetop.ejs %>
+    <% include ./content/menuPagetop.ejs %> <% WorksPage.work.forEach(function(element, index) { %>
     <div class="works_content">
-      <div class="works_content_title">Works</div>
+      <div class="works_content_title"><%= element.work_title %></div>
       <div class="slide">
-        <img src="/images/sample_img_1.png" alt="" />
-        <img src="/images/sample_img_1.png" alt="" />
-        <img src="/images/sample_img_1.png" alt="" />
+        <% element.work_image.forEach(function(e, i) { %>
+        <img src="<%= e %>" alt="" />
+        <% }) %>
       </div>
       <div class="works_content_skills">
-        <img src="/images/skills/skills_github.png" alt="" />
+        <% element.work_skills.forEach(function(e, i) { %>
+        <img src="/images/skills/skills_<%= e %>.png" alt="" />
+        <% }) %>
       </div>
-      <p class="works_content_description">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
+      <p class="works_content_description"><%= element.work_description %></p>
     </div>
-    <% include ./content/footer.ejs %>
+    <% }) %> <% include ./content/footer.ejs %>
   </body>
   <script>
     const element = document.querySelector(".slide");
