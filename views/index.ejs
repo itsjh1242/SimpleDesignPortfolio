@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Design Portfolio</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <script src="/javascripts/Strings.js"></script>
+    <script src="/javascripts/themeChange.js"></script>
+  </head>
+  <body>
+    <div class="index-frame">
+      <% include ./content/themeToggle.ejs %>
+      <!-- Profile Section -->
+      <div class="profile">
+        <p id="profile_banner" class="profile_banner"><%= IndexPage.profile_banner %></p>
+        <div class="profile_wrap_col">
+          <p id="profile_title" class="profile_title">Hi,</p>
+          <p id="profile_title" class="profile_title">I'm <%= IndexPage.profile_name %></p>
+        </div>
+        <div class="profile_image_layout_wrap_row">
+          <div id="profile_image_layout" class="profile_image_layout">
+            <input type="checkbox" id="slideBtn" class="slideBtn" />
+            <label for="slideBtn" class="labelBtn" onclick="moveProfileImageLayout()"
+              ><img id="profile_image" class="profile_image" src="/images/profileImage.png"
+            /></label>
+          </div>
+          <div id="profile_image_slide_wrap_row" class="profile_image_slide_wrap_row">
+            <% for(var i = 0; i < SlideTextCount; i++) { %>
+            <p id="profile_image_slide_text" class="profile_image_slide_text"><%= IndexPage.profile_slide[i] %></p>
+            <% } %>
+          </div>
+        </div>
+
+        <div class="profile_bottom_row">
+          <p id="left_text" class="left_text"><%= IndexPage.profile_left_text %></p>
+          <p id="right_text" class="right_text"><%= IndexPage.profile_right_text %></p>
+        </div>
+      </div>
+
+      <!-- Menu Section -->
+      <div id="menu_" class="menu_">
+        <% for (var i = 0; i < MenuCount; i++) { %>
+        <div class="menu_item">
+          <p id="menu_title_<%= i %>" class="menu_title"><%= IndexPage.menu[i][0] %></p>
+          <p id="menu_content_<%= i %>" class="menu_content"><%= IndexPage.menu[i][1] %></p>
+          <p id="menu_readmore<%= i %>" class="menu_readmore"><a href="/menu/<%= i %>"><%= IndexPage.menu_readmore %></a></p>
+        </div>
+        <% } %>
+      </div>
+    </div>
+    <% include ./content/footer.ejs %>
+  </body>
+
+  <script>
+    function moveProfileImageLayout() {
+      var slide = document.getElementById("profile_image_layout");
+      var slideText = document.getElementById("profile_image_slide_wrap_row");
+      slide.classList.toggle("move");
+      slideText.classList.toggle("move");
+    }
+  </script>
+</html>

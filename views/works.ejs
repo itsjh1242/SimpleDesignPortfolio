@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Design Portfolio</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <link rel="stylesheet" href="/stylesheets/imageSlide.css" />
+    <script src="/javascripts/Strings.js"></script>
+    <script src="/javascripts/themeChange.js"></script>
+    <script src="/javascripts/imageslide.js"></script>
+  </head>
+  <body>
+    <% include ./content/menuPagetop.ejs %> <% WorksPage.work.forEach(function(element, index) { %>
+    <div class="works_content">
+      <div class="works_content_title"><%= element.work_title %></div>
+      <div class="slide">
+        <% element.work_image.forEach(function(e, i) { %>
+        <img src="<%= e %>" alt="" />
+        <% }) %>
+      </div>
+      <div class="works_content_skills">
+        <% element.work_skills.forEach(function(e, i) { %>
+        <img src="/images/skills/skills_<%= e %>.png" alt="" />
+        <% }) %>
+      </div>
+      <p class="works_content_description"><%= element.work_description %></p>
+    </div>
+    <% }) %> <% include ./content/footer.ejs %>
+  </body>
+  <script>
+    const element = document.querySelectorAll(".slide");
+    
+    element.forEach(e => {
+      e.addEventListener("wheel", (event) => {
+      event.preventDefault();
+
+      e.scrollBy({
+        left: event.deltaY < 0 ? -30 : 30,
+      });
+    });
+    });
+
+    
+  </script>
+</html>
