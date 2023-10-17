@@ -53,11 +53,11 @@
           </div>
           <div class="bottom">
             <div class="SlideFrame">
-              <button class="BtnSlidePrev" onclick="SlideCountPlus()"></button>
+              <button class="BtnSlidePrev" onclick="SlideCountMinus()"></button>
               <img src="" alt="" class="SlidePrev" />
               <img src="" alt="" class="SlideCenter" />
               <img src="" alt="" class="SlideNext" />
-              <button class="BtnSlideNext" onclick="SlideCountMinus()"></button>
+              <button class="BtnSlideNext" onclick="SlideCountPlus()"></button>
             </div>
           </div>
           <% }) %>
@@ -67,29 +67,33 @@
     <% include ./content/footer.ejs %>
   </body>
   <script>
-    function SlideCountPlus() {
-      SlideCount++;
-      ImageUpdate();
-    }
-
-    function SlideCountMinus() {
-      SlideCount--;
-      ImageUpdate();
-    }
-
-    let SlideCount = 0;
+    var SlideCount = 0;
     const awardImageSrc = SkillsPage.Awards[0].AwardImage;
     const prevImg = document.querySelector(".SlidePrev");
     const centerImg = document.querySelector(".SlideCenter");
     const nextImg = document.querySelector(".SlideNext");
-    function ImageUpdate() {
-      if (SlideCount > 0) {
-        prevImg.src = awardImageSrc[SlideCount - 1];
-      } else {
-        prevImg.src = awardImageSrc[awardImageSrc.length - 1];
+
+    function updateImages() {
+      prevImg.src = awardImageSrc[(SlideCount - 1 + awardImageSrc.length) % awardImageSrc.length];
+      centerImg.src = awardImageSrc[SlideCount % awardImageSrc.length];
+      nextImg.src = awardImageSrc[(SlideCount + 1) % awardImageSrc.length];
+    }
+
+    window.onload = function () {
+      updateImages();
+    };
+
+    function SlideCountPlus() {
+      SlideCount++;
+      updateImages();
+    }
+
+    function SlideCountMinus() {
+      SlideCount--;
+      if (SlideCount < 0) {
+        SlideCount = awardImageSrc.length - 1;
       }
-      centerImg.src = awardImageSrc[SlideCount];
-      nextImg.src = awardImageSrc[SlideCount + 1];
+      updateImages();
     }
   </script>
 </html>

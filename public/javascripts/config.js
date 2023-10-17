@@ -103,7 +103,7 @@ const SkillsPage = {
       AwardDetail: "Won the Best of the Best",
       AwardTitle: "Touchable Hair Catalog for Blind",
       Role: ["Idea Maker", "Catalog Maker", "Support Panel Design", "Support Producting Video"],
-      AwardImage: ["/images/sample_img_1.png", "/images/sample_img_2.png", "/images/sample_img_1.png"],
+      AwardImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
     },
   ],
 };
