@@ -53,11 +53,11 @@
           </div>
           <div class="bottom">
             <div class="SlideFrame">
-              <button class="BtnSlidePrev" onclick="SlideCountMinus()"></button>
+              <button class="BtnSlidePrev" onclick="SlideCountMinus(); OnClickAni();"><</button>
               <img src="" alt="" class="SlidePrev" />
               <img src="" alt="" class="SlideCenter" />
               <img src="" alt="" class="SlideNext" />
-              <button class="BtnSlideNext" onclick="SlideCountPlus()"></button>
+              <button class="BtnSlideNext" onclick="SlideCountPlus(); OnClickAni();">></button>
             </div>
           </div>
           <% }) %>
@@ -68,10 +68,10 @@
   </body>
   <script>
     var SlideCount = 0;
-    const awardImageSrc = SkillsPage.Awards[0].AwardImage;
-    const prevImg = document.querySelector(".SlidePrev");
-    const centerImg = document.querySelector(".SlideCenter");
-    const nextImg = document.querySelector(".SlideNext");
+    var awardImageSrc = SkillsPage.Awards[0].AwardImage;
+    var prevImg = document.querySelector(".SlidePrev");
+    var centerImg = document.querySelector(".SlideCenter");
+    var nextImg = document.querySelector(".SlideNext");
 
     function updateImages() {
       prevImg.src = awardImageSrc[(SlideCount - 1 + awardImageSrc.length) % awardImageSrc.length];
@@ -94,6 +94,13 @@
         SlideCount = awardImageSrc.length - 1;
       }
       updateImages();
+    }
+
+    function OnClickAni() {
+      centerImg.className = "SkillsFadeIn";
+      setTimeout(function () {
+        centerImg.className = "";
+      }, 3000);
     }
   </script>
 </html>
