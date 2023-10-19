@@ -107,6 +107,47 @@
   -webkit-animation-fill-mode: forwards;
 }
 
+/* Slide Effects CSS */
+.SlideFrame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 300px;
+}
+.SlideFrame button {
+  font-size: 50px;
+  font-family: var(--font-extralight);
+  color: var(--font-color-primary);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.SlideFrame .SlideCenter {
+  width: 600px;
+  height: fit-content;
+  z-index: 1000;
+}
+
+.SlideFrame .SlidePrev {
+  width: 300px;
+  height: fit-content;
+  z-index: -1;
+  opacity: 0.5;
+  transform: translateX(20%);
+}
+
+.SlideFrame .SlideNext {
+  width: 300px;
+  height: fit-content;
+  z-index: -1;
+  opacity: 0.5;
+  transform: translateX(-20%);
+}
+
 /* Body */
 body {
   /* Root Padding All pages */
@@ -487,40 +528,32 @@ p {
   margin-top: var(--margin-bottom-24);
 }
 
-.award .skiils_component .bottom .SlideFrame {
+/* Activities Page */
+.activities_content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  height: 300px;
+  flex-direction: column;
+  padding: var(--padding-top-bottom-20);
+  margin-left: 240px;
+  margin-right: 240px;
 }
-.award .skiils_component .bottom .SlideFrame button {
-  font-size: 50px;
-  font-family: var(--font-extralight);
+
+.activities_content .activities_component {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   color: var(--font-color-primary);
-  border: none;
-  background: none;
-  cursor: pointer;
+  padding: var(--padding-top-bottom-20);
+  border-top: var(--border-top-bottom-light-gray);
+  border-bottom: var(--border-top-bottom-light-gray);
 }
 
-.award .skiils_component .bottom .SlideFrame .SlideCenter {
-  width: 600px;
-  height: fit-content;
-  z-index: 1;
+.activities_content .activities_component p:first-child {
+  font-family: var(--font-bold);
+  font-size: var(--font-size-50);
+  margin-bottom: var(--margin-bottom-24);
 }
 
-.award .skiils_component .bottom .SlideFrame .SlidePrev {
-  width: 300px;
-  height: fit-content;
-  z-index: 0;
-  opacity: 0.5;
-}
-
-.award .skiils_component .bottom .SlideFrame .SlideNext {
-  width: 300px;
-  height: fit-content;
-  z-index: 0;
-  opacity: 0.5;
+.activities_content .activities_component p:nth-child(2) {
+  font-family: var(--font-extralight);
+  font-size: var(--font-size-24);
 }

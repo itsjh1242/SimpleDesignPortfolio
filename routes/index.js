@@ -4,6 +4,7 @@ const IndexPage = require("../public/javascripts/config").IndexPage;
 const ExperiencePage = require("../public/javascripts/config").ExperiencePage;
 const WorksPage = require("../public/javascripts/config").WorksPage;
 const SkillsPage = require("../public/javascripts/config").SkillsPage;
+const ActivitiesPage = require("../public/javascripts/config").ActivitiesPage;
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -34,10 +35,14 @@ router.get("/menu/:index", function (req, res, next) {
     return res.render("skills", {
       SkillsPage: SkillsPage,
       menuTitle: "Skills & Certificates",
-      menuSubTitle: "Key Skills, Certificates"
+      menuSubTitle: "Key Skills, Certificates",
     });
   } else if (req.params.index == 3) {
-    return res.render("activities", {});
+    return res.render("activities", {
+      ActivitiesPage: ActivitiesPage,
+      menuTitle: "Activities",
+      menuSubTitle: "Extracurricular Activities, Leadership Roles",
+    });
   }
 });
 

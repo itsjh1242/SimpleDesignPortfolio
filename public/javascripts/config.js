@@ -108,9 +108,21 @@ const SkillsPage = {
   ],
 };
 
+const ActivitiesPage = {
+  Activities: [
+    {
+      ActivityName: "Activity 1",
+      ActivityDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      ActivityImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
+    },
+  ],
+};
+
 module.exports = {
   IndexPage: IndexPage,
   ExperiencePage: ExperiencePage,
   WorksPage: WorksPage,
   SkillsPage: SkillsPage,
+  ActivitiesPage: ActivitiesPage,
 };

@@ -9,60 +9,20 @@
   </head>
   <body>
     <% include ./content/menuPagetop.ejs %>
-    <div class="skiils_content">
-      <div class="language">
-        <div class="skiils_title">Languages</div>
-        <div class="skiils_component">
-          <% for (key in SkillsPage.Language) { %>
-          <p><%= key %> - <%= SkillsPage.Language[key] %></p>
-          <% } %>
+    <div class="activities_content">
+      <% ActivitiesPage.Activities.forEach(function(e, i) { %>
+      <div class="activities_component">
+        <p><%= e.ActivityName %></p>
+        <p><%= e.ActivityDescription %></p>
+        <div class="SlideFrame">
+          <button class="BtnSlidePrev" onclick="SlideCountMinus(); OnClickAni();"><</button>
+          <img src="" alt="" class="SlidePrev" />
+          <img src="" alt="" class="SlideCenter" />
+          <img src="" alt="" class="SlideNext" />
+          <button class="BtnSlideNext" onclick="SlideCountPlus(); OnClickAni();">></button>
         </div>
       </div>
-      <div class="computerSkills">
-        <div class="skiils_title">Computer Skills</div>
-        <div class="skiils_component">
-          <% for (key in SkillsPage.ComputerSkills) { %>
-          <p><%= key %> - <%= SkillsPage.ComputerSkills[key] %></p>
-          <% } %>
-        </div>
-      </div>
-      <div class="license">
-        <div class="skiils_title">License</div>
-        <div class="skiils_component">
-          <% SkillsPage.License.forEach(function(e, i) { %>
-          <p><%= e %></p>
-          <% }) %>
-        </div>
-      </div>
-      <div class="award">
-        <div class="skiils_title">Certificates/Awards</div>
-        <div class="skiils_component">
-          <% SkillsPage.Awards.forEach(function(e, i) { %>
-          <div class="top">
-            <div class="left">
-              <p><%= e.AwardTitle %></p>
-              <p><%= e.AwardDetail %></p>
-            </div>
-            <div class="right"><%= e.AwardAgency %>, <%= e.AwardYear %></div>
-          </div>
-          <div class="mid">
-            <p>Role In Team</p>
-            <% e.Role.forEach(function(el, i) { %>
-            <p>&nbsp;&nbsp;&nbsp;▫️<%= el %></p>
-            <% }) %>
-          </div>
-          <div class="bottom">
-            <div class="SlideFrame">
-              <button class="BtnSlidePrev" onclick="SlideCountMinus(); OnClickAni();"><</button>
-              <img src="" alt="" class="SlidePrev" />
-              <img src="" alt="" class="SlideCenter" />
-              <img src="" alt="" class="SlideNext" />
-              <button class="BtnSlideNext" onclick="SlideCountPlus(); OnClickAni();">></button>
-            </div>
-          </div>
-          <% }) %>
-        </div>
-      </div>
+      <% }) %>
     </div>
     <% include ./content/footer.ejs %>
   </body>
