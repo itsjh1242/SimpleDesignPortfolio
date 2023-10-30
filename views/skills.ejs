@@ -68,22 +68,22 @@
   </body>
   <script>
     var SlideCount = 0;
-    var awardImageSrc = SkillsPage.Awards[0].AwardImage;
+    var awardData = SkillsPage.Awards;
     var prevImg = document.querySelector(".SlidePrev");
     var centerImg = document.querySelector(".SlideCenter");
     var nextImg = document.querySelector(".SlideNext");
     var BtnSlideNext = document.querySelector(".BtnSlideNext");
     var BtnSlidePrev = document.querySelector(".BtnSlidePrev");
-
+  
     centerImg.addEventListener("mouseover", function () {
       centerImg.animate(
         {
           transform: ["scale(1.3)"],
         },
         {
-          duration: 500, // 밀리초 지정
-          fill: "forwards", // 종료 시 속성을 지님
-          easing: "ease", // 가속도 종류
+          duration: 500,
+          fill: "forwards",
+          easing: "ease",
         }
       );
     });
@@ -93,36 +93,41 @@
           transform: ["scale(1)"],
         },
         {
-          duration: 500, // 밀리초 지정
-          fill: "forwards", // 종료 시 속성을 지님
-          easing: "ease", // 가속도 종류
+          duration: 500,
+          fill: "forwards",
+          easing: "ease",
         }
       );
     });
-
+  
     function updateImages() {
-      prevImg.src = awardImageSrc[(SlideCount - 1 + awardImageSrc.length) % awardImageSrc.length];
-      centerImg.src = awardImageSrc[SlideCount % awardImageSrc.length];
-      nextImg.src = awardImageSrc[(SlideCount + 1) % awardImageSrc.length];
+      var currentAward = awardData[SlideCount];
+      var images = currentAward.AwardImage;
+      prevImg.src = images[0];
+      centerImg.src = images[1];
+      nextImg.src = images[2];
     }
-
+  
     window.onload = function () {
       updateImages();
     };
-
+  
     function SlideCountPlus() {
       SlideCount++;
-      updateImages();
-    }
-
-    function SlideCountMinus() {
-      SlideCount--;
-      if (SlideCount < 0) {
-        SlideCount = awardImageSrc.length - 1;
+      if (SlideCount >= awardData.length) {
+        SlideCount = 0; // 루프해서 처음으로 돌아갑니다.
       }
       updateImages();
     }
-
+  
+    function SlideCountMinus() {
+      SlideCount--;
+      if (SlideCount < 0) {
+        SlideCount = awardData.length - 1; // 루프해서 마지막으로 돌아갑니다.
+      }
+      updateImages();
+    }
+  
     function OnClickAni() {
       centerImg.className = "SkillsFadeIn";
       BtnSlideNext.disabled = true;

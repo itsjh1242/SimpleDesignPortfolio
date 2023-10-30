@@ -21,7 +21,7 @@ const IndexPage = {
   profile_left_text: "Profile",
   // Profile About Right Text
   profile_right_text:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Adaptable and skilled Software Engineer with a Bachelor's Degree in Software Engineering. Enthusiastic and determined, embrace challenges and never give up. Quick to learn new languages and programming skills. Proficient in Python, JavaScript and Dart, demonstrated expertise in Figma, Adobe Photoshop and Adobe Illustrator. Experienced in web development, commanding HTML and Web Server Programming. Collaborative and adept with GitHub for version control. Proud recipient of the “Best of the Best” distinction at the 2022 Red dot Award in the Brands & Communication Design category. Open-minded and friendly, I thrive in team circumstances and am eager to contribute to innovative organizations.",
   // Portfolio Menu Contents
   menu: {
     0: ["Experiences", "Job Responsibilities, Achievements"],
@@ -42,19 +42,29 @@ const IndexPage = {
 const ExperiencePage = {
   experience: [
     {
-      experience_title: "Freelance Designer",
-      experience_period: "Jan 2022 - July 2020",
-      experience_content: ["Support for makin the Brand Design", "Make illustrate", "Design Logo"],
+      experience_title: "Researcher and developer in Mobile Application (Intern)",
+      experience_period: "Jan 2023 - Nov 2023",
+      experience_content: ["Manage and lead a team to make good teamwork", "Develop mobile application with Flutter", "Design user interface for mobile applications using Figma"],
     },
     {
-      experience_title: "AYADA Thai Restruant Server",
-      experience_period: "May 2017 - Jun 2017",
-      experience_content: ["Handle to customor in English", "Manage the requirements from customer"],
+      experience_title: "Tutor in community of Python (Tutor)",
+      experience_period: "Mar 2023 - Jun 2023",
+      experience_content: ["Teach how to fine-tune the KoBERT model and utilize GPT-3 with Python", "Teach how to solve coding-test with complicated algorithm", "Guid students to have community well"],
     },
     {
-      experience_title: "Korea Dream Art Caricature Artist",
-      experience_period: "Jan2019 - Jun 2020",
-      experience_content: ["Perform the event schedule and manage the supplies", "Create the image for catching Character"],
+      experience_title: "Tutor in community of Node.js (Tutor)",
+      experience_period: "Sep 2022 - Dec 2022",
+      experience_content: ["Teach how to implement CRUD operations and create web-site using Node.js", "Teach how to design web-site with CSS", "Guide in connecting MySQL database with Node.js"],
+    },
+    {
+      experience_title: "Assistant Instructor (Assistant)",
+      experience_period: "Sep 2022 - Dec 2022",
+      experience_content: ["Assist main teacher to Scratch program", "Provide computer program guidance and teach the how to use and utilze program for student", "Help students troubleshoot programming issues and encourage their creativity"],
+    },
+    {
+      experience_title: "Tennis Matching Application Developer (Intern)",
+      experience_period: "Jun 2022 - August 2022",
+      experience_content: ["Assist to develop a tennis matching application using Flutter", "Provide and support to make implementation of database structures with Firebase", "Assist to conect the development of server and database communication functionalities"],
     },
   ],
 };
@@ -62,31 +72,58 @@ const ExperiencePage = {
 const WorksPage = {
   work: [
     {
-      work_title: "Works 1",
+      work_title: "Simple Design Portfolio Web Page",
       work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
-      work_skills: ["github", "python", "javascript", "android"],
+      work_skills: ["github", "javascript", "html", "nodejs", "css"],
+      work_role: "Main Developer and UI Designer",
       work_description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "설명",
     },
     {
-      work_title: "Works 2",
-      work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
-      work_skills: ["github", "python", "javascript", "android"],
+      work_title: "Motion recognition-Based Double-Cipher Authenticatioin System",
+      work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png"],
+      work_skills: ["github", "android", "nodejs", "mysql"],
+      work_role: "Main Developer and UI Designer",
       work_description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "설명",
     },
     {
-      work_title: "Works 3",
+      work_title: "AI Chatbot-based Diary Writing System for Positive Emotion",
       work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
-      work_skills: ["github", "python", "javascript", "android"],
+      work_skills: ["python", "flask", "nodejs", "mysql", "html"],
+      work_role: "Main developer, UI Designer and tester",
       work_description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "설명",
+    },
+    {
+      work_title: "Finger recognition absenteeism management system using Arduino",
+      work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
+      work_skills: ["arduino", "nodejs", "html", "css", "mysql", "javascript"],
+      work_role: "Main Developer, UI Designer and tester",
+      work_description:
+        "설명",
+    },
+    {
+      work_title: "Online Book Store",
+      work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
+      work_skills: ["nodejs", "html", "css", "javascript", "mysql"],
+      work_role: "Main developer, UI Designer and tester",
+      work_description:
+        "설명",
+    },
+    {
+      work_title: "Tennis Matching Application",
+      work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
+      work_skills: ["flutter", "firebase"],
+      work_role: "UI Design Assistant and tester",
+      work_description:
+        "설명",
     },
   ],
 };
 
 const SkillsPage = {
-  Language: { Korean: "Fluent speaking", English: "Fluent speaking", Chinese: "Mid-level" },
+  Language: { Korean: "Native", English: "Fluent", Japaness: "Mid-level" },
   ComputerSkills: {
     Python: "Advance",
     Javascript: "Advance",
@@ -95,7 +132,10 @@ const SkillsPage = {
     "Adobe Photoshop": "Advance",
     "Adobe Illustrator": "Advance",
   },
-  License: ["Driving license"],
+  License: [
+    "Certificate of ITQ Excel, Word - Korea Productivity Center",
+    "Certificate of Scuba diving - National Association of Underwater Instructor"
+  ],
   Awards: [
     {
       AwardAgency: "Red dot Award",
@@ -105,15 +145,50 @@ const SkillsPage = {
       Role: ["Idea Maker", "Catalog Maker", "Support Panel Design", "Support Producting Video"],
       AwardImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
     },
+    {
+      AwardAgency: "Yound One Adc",
+      AwardYear: "2023",
+      AwardDetail: "Won recognotion with Merit and Short-list accolades",
+      AwardTitle: "Touchable Hair Catalog for Blind",
+      Role: ["Idea Maker", "Catalog Maker", "Support Panel Design", "Support Producting Video"],
+      AwardImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
+    },
+    {
+      AwardAgency: "Mad Stars event",
+      AwardYear: "2022",
+      AwardDetail: "Won the Crystal award",
+      AwardTitle: "Touchable Hair Catalog for Blind",
+      Role: ["Idea Maker", "Catalog Maker", "Support Panel Design", "Support Producting Video"],
+      AwardImage: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
+    },
   ],
 };
 
 const ActivitiesPage = {
   Activities: [
     {
-      ActivityName: "Activity 1",
+      ActivityName: "IT volunteer club by Dongseo university, Korea",
       ActivityDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        ["Participate as an assistant instructor for Python and Scratch",
+        "Create a Study circumstances"
+      ],
+      ActivityImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
+    },
+    {
+      ActivityName: "Dongseo University Volunteer Group, Korea",
+      ActivityDescription:
+        ["Assist with laundry and cleaning at nursing homes",
+        "Participate in mural painting projects",
+        "Teach coding(Scratch), Mathematic and English to children"
+      ],
+      ActivityImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
+    },
+    {
+      ActivityName: "Military Service",
+      ActivityDescription:
+        ["Enlisted in the Marine Corps in January 2019",
+        "Honorably discharged from the Marine Corps in August 2020"
+      ],
       ActivityImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
     },
   ],

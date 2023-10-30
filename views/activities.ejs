@@ -13,7 +13,9 @@
       <% ActivitiesPage.Activities.forEach(function(e, i) { %>
       <div class="activities_component">
         <p><%= e.ActivityName %></p>
-        <p><%= e.ActivityDescription %></p>
+        <% e.ActivityDescription.forEach(function(ee, ii) { %>
+        <p>◦<%= ee %></p>
+        <% }) %>
         <div class="SlideFrame">
           <button class="BtnSlidePrev" onclick="SlideCountMinus(); OnClickAni();"><</button>
           <img src="" alt="" class="SlidePrev" />

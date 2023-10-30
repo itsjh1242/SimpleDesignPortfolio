@@ -264,6 +264,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 .index-frame .profile .profile_wrap_col .profile_title {
   font-family: var(--font-medium);
@@ -275,6 +276,7 @@ p {
   justify-content: center;
   align-items: center;
   width: 100%;
+  
 }
 .index-frame .profile .profile_image_layout_wrap_row .profile_image_layout {
   display: flex;
@@ -286,6 +288,7 @@ p {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 0, 0, 0.7) 100%);
   overflow: hidden;
   transition: 0.9s;
+  
 }
 
 .index-frame .profile .profile_image_layout_wrap_row .profile_image_layout.move {
@@ -297,6 +300,7 @@ p {
 }
 .index-frame .profile .profile_image_layout_wrap_row .profile_image_layout img {
   object-fit: cover;
+  cursor: pointer;
 }
 .index-frame .profile .profile_image_layout_wrap_row .profile_image_slide_wrap_row {
   display: none;
@@ -402,6 +406,7 @@ p {
 .experience_content .content_top .experience_title {
   font-family: var(--font-bold);
   font-size: var(--font-size-50);
+  width: 1100px;
   color: var(--font-color-primary);
 }
 .experience_content .content_top .experience_period {
@@ -451,6 +456,13 @@ p {
   width: 30px;
   height: 30px;
 }
+.works_content .works_content_role {
+  font-family: var(--font-light);
+  font-size: var(--font-size-24);
+  color: var(--font-color-primary);
+  margin-top: var(--margin-small);
+} 
+
 .works_content .works_content_description {
   font-family: var(--font-light);
   font-size: var(--font-size-24);
@@ -545,6 +557,7 @@ p {
   padding: var(--padding-top-bottom-20);
   border-top: var(--border-top-bottom-light-gray);
   border-bottom: var(--border-top-bottom-light-gray);
+  margin-bottom: var(--margin-bottom-24);
 }
 
 .activities_content .activities_component p:first-child {
@@ -553,7 +566,7 @@ p {
   margin-bottom: var(--margin-bottom-24);
 }
 
-.activities_content .activities_component p:nth-child(2) {
+.activities_content .activities_component p {
   font-family: var(--font-extralight);
   font-size: var(--font-size-24);
 }
