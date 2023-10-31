@@ -17,11 +17,11 @@
         <p>◦<%= ee %></p>
         <% }) %>
         <div class="SlideFrame">
-          <button class="BtnSlidePrev" onclick="SlideCountMinus(); OnClickAni();"><</button>
-          <img src="" alt="" class="SlidePrev" />
-          <img src="" alt="" class="SlideCenter" />
-          <img src="" alt="" class="SlideNext" />
-          <button class="BtnSlideNext" onclick="SlideCountPlus(); OnClickAni();">></button>
+          <button class="BtnSlidePrev" onclick="SlideCountMinus('<%= i %>'); OnClickAni('<%= i %>');"><</button>
+          <img src="" alt="" class="SlidePrev" id="p<%= i %>" />
+          <img src="" alt="" class="SlideCenter" id="c<%= i %>" />
+          <img src="" alt="" class="SlideNext" id="n<%= i %>" />
+          <button class="BtnSlideNext" onclick="SlideCountPlus('<%= i %>'); OnClickAni('<%= i %>');">></button>
         </div>
       </div>
       <% }) %>
@@ -29,68 +29,86 @@
     <% include ./content/footer.ejs %>
   </body>
   <script>
-    var SlideCount = 0;
-    var awardImageSrc = SkillsPage.Awards[0].AwardImage;
-    var prevImg = document.querySelector(".SlidePrev");
-    var centerImg = document.querySelector(".SlideCenter");
-    var nextImg = document.querySelector(".SlideNext");
-    var BtnSlideNext = document.querySelector(".BtnSlideNext");
-    var BtnSlidePrev = document.querySelector(".BtnSlidePrev");
+    var SlideCounts = [];
+    for (var i = 0; i < ActivitiesPage.Activities.length; i++) {
+      SlideCounts.push(0);
+    }
+    var activityData = ActivitiesPage.Activities;
 
-    centerImg.addEventListener("mouseover", function () {
-      centerImg.animate(
-        {
-          transform: ["scale(1.3)"],
-        },
-        {
-          duration: 500, // 밀리초 지정
-          fill: "forwards", // 종료 시 속성을 지님
-          easing: "ease", // 가속도 종류
-        }
-      );
-    });
-    centerImg.addEventListener("mouseout", function () {
-      centerImg.animate(
-        {
-          transform: ["scale(1)"],
-        },
-        {
-          duration: 500, // 밀리초 지정
-          fill: "forwards", // 종료 시 속성을 지님
-          easing: "ease", // 가속도 종류
-        }
-      );
-    });
+    function updateImages(index) {
+      var images = activityData[index].ActivityImage;
+      var prevImg = document.getElementById("p" + index);
+      var centerImg = document.getElementById("c" + index);
+      var nextImg = document.getElementById("n" + index);
 
-    function updateImages() {
-      prevImg.src = awardImageSrc[(SlideCount - 1 + awardImageSrc.length) % awardImageSrc.length];
-      centerImg.src = awardImageSrc[SlideCount % awardImageSrc.length];
-      nextImg.src = awardImageSrc[(SlideCount + 1) % awardImageSrc.length];
+      if (images && images.length >= 3) {
+        prevImg.src = images[(SlideCounts[index] - 1 + images.length) % images.length];
+        centerImg.src = images[SlideCounts[index] % images.length];
+        nextImg.src = images[(SlideCounts[index] + 1) % images.length];
+      }
+    }
+
+    function onloadInit() {
+      for (var i = 0; i < activityData.length; i++) {
+        updateImages(i);
+      }
     }
 
     window.onload = function () {
-      updateImages();
+      onloadInit();
     };
 
-    function SlideCountPlus() {
-      SlideCount++;
-      updateImages();
-    }
-
-    function SlideCountMinus() {
-      SlideCount--;
-      if (SlideCount < 0) {
-        SlideCount = awardImageSrc.length - 1;
+    function SlideCountPlus(index) {
+      SlideCounts[index] += 1;
+      if (SlideCounts[index] >= activityData[index].ActivityImage.length) {
+        SlideCounts[index] = 0; // 루프해서 처음으로 돌아갑니다.
       }
-      updateImages();
+      updateImages(index);
     }
 
-    function OnClickAni() {
-      centerImg.className = "SkillsFadeIn";
+    function SlideCountMinus(index) {
+      SlideCounts[index] -= 1;
+      if (SlideCounts[index] < 0) {
+        SlideCounts[index] = activityData[index].ActivityImage.length - 1; // 루프해서 마지막으로 돌아갑니다.
+      }
+      updateImages(index);
+    }
+
+    var centerImgs = document.querySelectorAll(".SlideCenter");
+    for (var i = 0; i < centerImgs.length; i++) {
+      centerImgs[i].addEventListener("mouseover", function () {
+        this.animate(
+          {
+            transform: ["scale(1.3)"],
+          },
+          {
+            duration: 500,
+            fill: "forwards",
+            easing: "ease",
+          }
+        );
+      });
+      centerImgs[i].addEventListener("mouseout", function () {
+        this.animate(
+          {
+            transform: ["scale(1)"],
+          },
+          {
+            duration: 500,
+            fill: "forwards",
+            easing: "ease",
+          }
+        );
+      });
+    }
+
+    function OnClickAni(index) {
+      var centerImg = document.getElementById("c" + index);
+      centerImg.classList.add("SkillsFadeIn");
       BtnSlideNext.disabled = true;
       BtnSlidePrev.disabled = true;
       setTimeout(function () {
-        centerImg.className = "";
+        centerImg.classList.remove("SkillsFadeIn");
         BtnSlideNext.disabled = false;
         BtnSlidePrev.disabled = false;
       }, 1500);

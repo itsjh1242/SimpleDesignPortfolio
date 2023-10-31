@@ -44,27 +44,47 @@ const ExperiencePage = {
     {
       experience_title: "Researcher and developer in Mobile Application (Intern)",
       experience_period: "Jan 2023 - Nov 2023",
-      experience_content: ["Manage and lead a team to make good teamwork", "Develop mobile application with Flutter", "Design user interface for mobile applications using Figma"],
+      experience_content: [
+        "Manage and lead a team to make good teamwork",
+        "Develop mobile application with Flutter",
+        "Design user interface for mobile applications using Figma",
+      ],
     },
     {
       experience_title: "Tutor in community of Python (Tutor)",
       experience_period: "Mar 2023 - Jun 2023",
-      experience_content: ["Teach how to fine-tune the KoBERT model and utilize GPT-3 with Python", "Teach how to solve coding-test with complicated algorithm", "Guid students to have community well"],
+      experience_content: [
+        "Teach how to fine-tune the KoBERT model and utilize GPT-3 with Python",
+        "Teach how to solve coding-test with complicated algorithm",
+        "Guid students to have community well",
+      ],
     },
     {
       experience_title: "Tutor in community of Node.js (Tutor)",
       experience_period: "Sep 2022 - Dec 2022",
-      experience_content: ["Teach how to implement CRUD operations and create web-site using Node.js", "Teach how to design web-site with CSS", "Guide in connecting MySQL database with Node.js"],
+      experience_content: [
+        "Teach how to implement CRUD operations and create web-site using Node.js",
+        "Teach how to design web-site with CSS",
+        "Guide in connecting MySQL database with Node.js",
+      ],
     },
     {
       experience_title: "Assistant Instructor (Assistant)",
       experience_period: "Sep 2022 - Dec 2022",
-      experience_content: ["Assist main teacher to Scratch program", "Provide computer program guidance and teach the how to use and utilze program for student", "Help students troubleshoot programming issues and encourage their creativity"],
+      experience_content: [
+        "Assist main teacher to Scratch program",
+        "Provide computer program guidance and teach the how to use and utilze program for student",
+        "Help students troubleshoot programming issues and encourage their creativity",
+      ],
     },
     {
       experience_title: "Tennis Matching Application Developer (Intern)",
       experience_period: "Jun 2022 - August 2022",
-      experience_content: ["Assist to develop a tennis matching application using Flutter", "Provide and support to make implementation of database structures with Firebase", "Assist to conect the development of server and database communication functionalities"],
+      experience_content: [
+        "Assist to develop a tennis matching application using Flutter",
+        "Provide and support to make implementation of database structures with Firebase",
+        "Assist to conect the development of server and database communication functionalities",
+      ],
     },
   ],
 };
@@ -73,51 +93,62 @@ const WorksPage = {
   work: [
     {
       work_title: "Simple Design Portfolio Web Page",
-      work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
+      work_image: ["/images/works/simpledesignportfolio.png", "/images/works/simpledesignportfolio2.png", "/images/works/simpledesignportfolio3.png"],
       work_skills: ["github", "javascript", "html", "nodejs", "css"],
       work_role: "Main Developer and UI Designer",
-      work_description:
-        "설명",
+      work_description: "설명",
     },
     {
       work_title: "Motion recognition-Based Double-Cipher Authenticatioin System",
-      work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png"],
+      work_image: ["/images/commingsoon.png", "/images/commingsoon.png"],
       work_skills: ["github", "android", "nodejs", "mysql"],
       work_role: "Main Developer and UI Designer",
-      work_description:
-        "설명",
+      work_description: "설명",
     },
     {
       work_title: "AI Chatbot-based Diary Writing System for Positive Emotion",
-      work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
+      work_image: [
+        "/images/works/aichatbot.png",
+        "/images/works/aichatbot2.png",
+        "/images/works/aichatbot3.png",
+        "/images/works/aichatbot4.png",
+        "/images/works/aichatbot5.png",
+      ],
       work_skills: ["python", "flask", "nodejs", "mysql", "html"],
       work_role: "Main developer, UI Designer and tester",
-      work_description:
-        "설명",
+      work_description: "설명",
     },
     {
       work_title: "Finger recognition absenteeism management system using Arduino",
-      work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
+      work_image: [
+        "/images/works/fingerrecognition0.png",
+        "/images/works/fingerrecognition.png",
+        "/images/works/fingerrecognition1.png",
+        "/images/works/fingerrecognition2.png",
+        "/images/works/fingerrecognition3.png",
+        "/images/works/fingerrecognition4.png",
+        "/images/works/fingerrecognition5.png",
+        "/images/works/fingerrecognition6.png",
+        "/images/works/fingerrecognition7.png",
+        "/images/works/fingerrecognition8.png",
+      ],
       work_skills: ["arduino", "nodejs", "html", "css", "mysql", "javascript"],
       work_role: "Main Developer, UI Designer and tester",
-      work_description:
-        "설명",
+      work_description: "설명",
     },
     {
       work_title: "Online Book Store",
-      work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
+      work_image: ["/images/commingsoon.png", "/images/commingsoon.png", "/images/commingsoon.png"],
       work_skills: ["nodejs", "html", "css", "javascript", "mysql"],
       work_role: "Main developer, UI Designer and tester",
-      work_description:
-        "설명",
+      work_description: "설명",
     },
     {
       work_title: "Tennis Matching Application",
-      work_image: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
+      work_image: ["/images/commingsoon.png", "/images/commingsoon.png", "/images/commingsoon.png"],
       work_skills: ["flutter", "firebase"],
       work_role: "UI Design Assistant and tester",
-      work_description:
-        "설명",
+      work_description: "설명",
     },
   ],
 };
@@ -132,10 +163,7 @@ const SkillsPage = {
     "Adobe Photoshop": "Advance",
     "Adobe Illustrator": "Advance",
   },
-  License: [
-    "Certificate of ITQ Excel, Word - Korea Productivity Center",
-    "Certificate of Scuba diving - National Association of Underwater Instructor"
-  ],
+  License: ["Certificate of ITQ Excel, Word - Korea Productivity Center", "Certificate of Scuba diving - National Association of Underwater Instructor"],
   Awards: [
     {
       AwardAgency: "Red dot Award",
@@ -143,7 +171,13 @@ const SkillsPage = {
       AwardDetail: "Won the Best of the Best",
       AwardTitle: "Touchable Hair Catalog for Blind",
       Role: ["Idea Maker", "Catalog Maker", "Support Panel Design", "Support Producting Video"],
-      AwardImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
+      AwardImage: [
+        "/images/skills/reddot.png",
+        "/images/skills/reddot1.jpeg",
+        "/images/skills/reddot2.jpeg",
+        "/images/skills/reddot3.jpeg",
+        "/images/skills/reddot4.jpeg",
+      ],
     },
     {
       AwardAgency: "Yound One Adc",
@@ -151,7 +185,7 @@ const SkillsPage = {
       AwardDetail: "Won recognotion with Merit and Short-list accolades",
       AwardTitle: "Touchable Hair Catalog for Blind",
       Role: ["Idea Maker", "Catalog Maker", "Support Panel Design", "Support Producting Video"],
-      AwardImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png"],
+      AwardImage: ["/images/skills/YoungOnes.png", "/images/skills/YoungOnes.png", "/images/skills/YoungOnes.png"],
     },
     {
       AwardAgency: "Mad Stars event",
@@ -159,7 +193,7 @@ const SkillsPage = {
       AwardDetail: "Won the Crystal award",
       AwardTitle: "Touchable Hair Catalog for Blind",
       Role: ["Idea Maker", "Catalog Maker", "Support Panel Design", "Support Producting Video"],
-      AwardImage: ["/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
+      AwardImage: ["/images/skills/madstars.png", "/images/skills/madstars.png", "/images/skills/madstars.png"],
     },
   ],
 };
@@ -168,28 +202,22 @@ const ActivitiesPage = {
   Activities: [
     {
       ActivityName: "IT volunteer club by Dongseo university, Korea",
-      ActivityDescription:
-        ["Participate as an assistant instructor for Python and Scratch",
-        "Create a Study circumstances"
-      ],
-      ActivityImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
+      ActivityDescription: ["Participate as an assistant instructor for Python and Scratch", "Create a Study circumstances"],
+      ActivityImage: ["/images/commingsoon.png", "/images/commingsoon.png", "/images/commingsoon.png"],
     },
     {
       ActivityName: "Dongseo University Volunteer Group, Korea",
-      ActivityDescription:
-        ["Assist with laundry and cleaning at nursing homes",
+      ActivityDescription: [
+        "Assist with laundry and cleaning at nursing homes",
         "Participate in mural painting projects",
-        "Teach coding(Scratch), Mathematic and English to children"
+        "Teach coding(Scratch), Mathematic and English to children",
       ],
-      ActivityImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
+      ActivityImage: ["/images/commingsoon.png", "/images/commingsoon.png", "/images/commingsoon.png"],
     },
     {
       ActivityName: "Military Service",
-      ActivityDescription:
-        ["Enlisted in the Marine Corps in January 2019",
-        "Honorably discharged from the Marine Corps in August 2020"
-      ],
-      ActivityImage: ["/images/sample_img_2.png", "/images/sample_img_1.png", "/images/sample_img_1.png", "/images/sample_img_2.png"],
+      ActivityDescription: ["Enlisted in the Marine Corps in January 2019", "Honorably discharged from the Marine Corps in August 2020"],
+      ActivityImage: ["/images/activity/military.jpg", "/images/activity/military1.jpg", "/images/activity/military2.jpg"],
     },
   ],
 };
